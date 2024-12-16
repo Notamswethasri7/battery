@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 
 # Load the dataset (adjust the path as necessary)
-df = pd.read_csv(r"C:/Users/Swetha/Downloads/battery/cleaned_dataset/metadata.csv")
+df = pd.read_csv(r"C:/Users/Swetha/Downloads/metadata.csv")
 
 # Inspect the first few rows to understand the structure
 print(df.head())

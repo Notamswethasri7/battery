@@ -12,3 +12,6 @@ From this dataset, could you create plots using plotly (https://plotly.com/) sho
 Battery_impedance
 Re: Estimated electrolyte resistance (Ohms)
 Rct: Estimated charge transfer resistance (Ohms)
+
+
+ This is the asssignment link in jupyter notebook-    http://localhost:8889/notebooks/Untitled1.ipynb

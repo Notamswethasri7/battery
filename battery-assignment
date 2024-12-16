@@ -1,0 +1,27 @@
+import pandas as pd
+import plotly.express as px
+
+# Load the dataset (adjust the path as necessary)
+df = pd.read_csv(r"C:/Users/Swetha/Downloads/battery/cleaned_dataset/metadata.csv")
+
+# Inspect the first few rows to understand the structure
+print(df.head())
+
+# Reset index to use it as a cycle identifier
+df.reset_index(inplace=True)
+
+# Plot Capacity over cycles (if it's available and relevant)
+fig1 = px.line(df, x='index', y='Capacity', title='Battery Capacity vs. Cycle', 
+               labels={'index': 'Cycle', 'Capacity': 'Battery Capacity (Ah)'})
+fig1.show()
+
+# Plot Re (Estimated Electrolyte Resistance) over cycles
+fig2 = px.line(df, x='index', y='Re', title='Estimated Electrolyte Resistance (Re) vs. Cycle',
+               labels={'index': 'Cycle', 'Re': 'Re (Ohms)'})
+fig2.show()
+
+# Plot Rct (Estimated Charge Transfer Resistance) over cycles
+fig3 = px.line(df, x='index', y='Rct', title='Estimated Charge Transfer Resistance (Rct) vs. Cycle',
+               labels={'index': 'Cycle', 'Rct': 'Rct (Ohms)'})
+fig3.show()
+
